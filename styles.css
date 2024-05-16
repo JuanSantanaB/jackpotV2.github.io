@@ -1,0 +1,162 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white; /* Text color */
+}
+
+@font-face {
+    font-family: 'DS Digital';
+    src: url('fonts/DS-DIGII.TTF') format('truetype'); /* Adjust the path and file format */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.jackpot-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Allow height to adjust based on image aspect ratio */
+    position: relative; /* Position relative for absolute positioning */
+    margin-bottom: 30px;
+}
+
+#jackpotImage {
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    max-height: 100%; /* Ensure the image doesn't exceed the container height */
+}
+
+.jackpot-text {
+    font-family: 'DS Digital', sans-serif; /* Replace "Your Tasteful Font" with your preferred font */
+    font-size: 20px; /* Adjust font size */
+    color: #39FF14; /* Adjust text color */
+    text-align: center; /* Center align text */
+    margin-top: -20px; /* Adjust the top margin to position it above the image */
+    font-family: 'DS Digital', sans-serif;
+}
+
+.score-container {
+    font-family: 'DS Digital', sans-serif; /* Replace "Your Tasteful Font" with your preferred font */
+    font-size: 50px;
+    color: #39FF14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin for proper spacing */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.slot {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 10px; /* Adjust margin for proper spacing and wrapping */
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.button-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#spinButton,
+#resetButton {
+    font-family: 'DS Digital', sans-serif;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Ensure full width for the button */
+    max-width: 200px; /* Max width for larger screens */
+    margin-top: 10px; /* Adjust margin for proper spacing */
+}
+
+/* Media Queries for responsiveness */
+
+/* For iPads (portrait and landscape) */
+@media (max-width: 1024px) {
+    .slot {
+        width: 120px;
+        height: 120px;
+    }
+
+    .score-container {
+        font-size: 40px;
+    }
+
+    .jackpot-text {
+        font-size: 18px;
+    }
+
+    #spinButton,
+    #resetButton {
+        max-width: 150px;
+    }
+}
+
+/* For phones (portrait and landscape) */
+@media (max-width: 768px) {
+    .slot {
+        width: 100px;
+        height: 100px;
+    }
+
+    .score-container {
+        font-size: 30px;
+    }
+
+    .jackpot-text {
+        font-size: 16px;
+    }
+
+    #spinButton,
+    #resetButton {
+        max-width: 120px;
+    }
+}
+
+/* For small phones (portrait and landscape) */
+@media (max-width: 480px) {
+    .slot {
+        width: 80px;
+        height: 80px;
+    }
+
+    .score-container {
+        font-size: 20px;
+    }
+
+    .jackpot-text {
+        font-size: 14px;
+    }
+
+    #spinButton,
+    #resetButton {
+        padding: 8px 16px;
+        max-width: 100px;
+    }
+}

@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white; /* Text color */
+}
+
+@font-face {
+    font-family: 'DS Digital';
+    src: url('fonts/DS-DIGII.TTF') format('truetype'); /* Adjust the path and file format */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%; /* Adjust the maximum width as needed */
+}
+
+.questions-container {
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure full width for the container */
+    justify-content: center; /* Center content horizontally */
+}
+
+.button-container {
+    margin-top: 20px;
+    width: 30%; /* Ensure full width for the container */
+    justify-content: center; /* Center content horizontally */
+}
+
+#returnButton {
+    font-family: 'DS Digital', sans-serif;
+    background-color: red;
+    color: white;
+    padding: 20px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Ensure full width for the button */
+}
+
+/* Media queries for responsive design */
+
+/* For phones */
+@media (max-width: 600px) {
+    .container {
+        max-width: 90%; /* Adjust the maximum width for smaller screens */
+    }
+}
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        max-width: 70%; /* Adjust the maximum width for tablets */
+    }
+}
